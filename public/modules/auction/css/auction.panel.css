@@ -1,0 +1,14 @@
+
+.auction-panel .item-icon img{
+ width: 80px;
+}
+
+.auction-panel .item-info{
+ margin: 5px 0;
+}
+
+.auction-panel .info-row{
+ text-align: center;
+ font-size: 20px;
+ margin: 15px 0;
+}

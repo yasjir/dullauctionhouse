@@ -1,0 +1,71 @@
+<div ng-controller='AuctionController' ng-cloak >
+  <md-content class="md-padding" layout="row" layout-wrap layout-align="center center">
+     <div flex="33" layout="column">
+       <md-card>
+         <md-card-title>
+            <md-card-title-text >
+              <span class="md-headline">
+                  <md-icon md-svg-icon="account"></md-icon>
+                  Player stats
+                </span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-divider></md-divider>
+        <md-card-content layout="column" layout-wrap>
+          <div layout='row' flex>
+            <span flex="30" layout='column'>Name: </span>
+            <span flex="70" layout='column'><b>{{user.username}}</b></span>
+          </div>
+          <div layout='row' flex>
+            <span flex="30" layout='column'>Coins: </span>
+            <span flex="70" layout='column'><b>{{user.coins}}</b></span>
+          </div>
+          <!-- <div flex layout='column'>
+            <span flex="30">Name: </span>
+            <span flex="70">{{user.username}}</span>
+          </div> -->
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-raised" ng-click="logout()">
+            <md-icon md-svg-icon="logout"></md-icon>
+            Logout
+          </md-button>
+        </md-card-actions>
+      </md-card>
+     </div>
+
+     <div flex="33" layout="column">
+       <md-card>
+         <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">
+                <md-icon md-svg-icon="package-variant"></md-icon>
+                  Inventory
+                </span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-divider></md-divider>
+        <md-card-content>
+          <md-list>
+            <md-list-item class="md-3-line" ng-repeat="item in user.inventory" layout='row' layout-align="center center">
+              <item-icon flex="30" item="item"></item-icon>
+              <quantity-info  flex="50" quantity="item.quantity"></quantity-info>
+              <div class="md-list-item-text" flex="20" layout='column' layout-align="center center">
+                <md-button  class="md-icon-button md-primary" flex
+                  aria-label="Go auction!" ng-click="auctionConfirm(item,$event)">
+                  <md-icon md-svg-icon="gavel" ></md-icon>
+                </md-button>
+              </div>
+              <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+          </md-list>
+        </md-card-content>
+      </md-card>
+     </div>
+
+     <div flex="33" layout="column">
+       <auction-panel auctions='auctions'></auction-panel>
+     </div>
+
+  </md-content>
+</div>

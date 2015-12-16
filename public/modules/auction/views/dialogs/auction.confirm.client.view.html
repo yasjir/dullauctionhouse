@@ -1,0 +1,35 @@
+<md-dialog class='new-auction' aria-label="New Auction"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div flex class="md-toolbar-tools">
+        <h2>Start new auction</h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content" flex layout='row'>
+         <item-icon flex="30" item="item"></item-icon>
+        <div  flex layout='column'>
+          <md-input-container class="md-block">
+            <label>Quantity</label>
+            <input ng-model="quantity" type="number" min="1">
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Minimal bid</label>
+            <input ng-model="bid" type="number" min="1">
+          </md-input-container>
+        </div>
+
+        <!-- <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/mangues.jpg"> -->
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button ng-click="answer('not useful')">
+       Ok
+      </md-button>
+      <md-button ng-click="answer('useful')" style="margin-right:20px;">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

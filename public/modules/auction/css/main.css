@@ -1,0 +1,17 @@
+
+md-list-item item-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+md-dialog.new-auction .item-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+md-dialog.new-auction md-dialog-content{
+  width: 350px;
+}
+md-dialog.new-auction md-dialog-content .item-info{
+  width: 90px;
+}

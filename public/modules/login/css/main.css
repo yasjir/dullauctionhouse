@@ -1,0 +1,8 @@
+.login-form{
+  max-width: 300px;
+}
+
+.login-form md-card-title md-icon{
+  width: 150px;
+  height: 150px;
+}

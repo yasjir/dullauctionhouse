@@ -1,0 +1,27 @@
+<div ng-controller='LogInController' ng-cloak >
+    <md-content layout='column' layout-align="center center">
+        <div layout="column" class=' login-form'>
+          <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <md-icon md-svg-icon="account"></md-icon>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            <md-input-container class="md-block" >
+                <label>Name</label>
+                <input ng-model="username">
+              </md-input-container>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-raised" ng-click='login()'>
+              <md-icon md-svg-icon="login"></md-icon>
+              Sign in
+            </md-button>
+          </md-card-actions>
+        </md-card>
+
+        </div>
+
+    </md-content>
+</div>
